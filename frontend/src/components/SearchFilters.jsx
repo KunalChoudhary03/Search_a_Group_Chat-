@@ -47,16 +47,16 @@ export const SearchFilters = ({
         <select
           value={sender}
           onChange={(e) => onSenderChange(e.target.value)}
-          className="appearance-none bg-[#13161c] hover:bg-[#181c24] border border-[#232731] hover:border-[#2f3542] text-zinc-200 text-xs rounded-lg pl-3 pr-7 py-1.5 outline-none focus:border-indigo-500/70 transition-colors cursor-pointer font-medium"
+          className="appearance-none bg-[#F0F2F5] hover:bg-[#E9EDEF] border border-[#D1D7DB] hover:border-[#00A884] text-[#111B21] text-xs rounded-lg pl-3 pr-7 py-1.5 outline-none focus:border-[#00A884] transition-colors cursor-pointer font-medium"
         >
-          <option value="">All Participants</option>
+          <option value="" className="bg-[#F0F2F5] text-[#111B21]">All Participants</option>
           {senders.map((s) => (
-            <option key={s} value={s}>
+            <option key={s} value={s} className="bg-[#F0F2F5] text-[#111B21]">
               {s}
             </option>
           ))}
         </select>
-        <ChevronDown className="w-3.5 h-3.5 text-zinc-500 absolute right-2 top-2 pointer-events-none" />
+        <ChevronDown className="w-3.5 h-3.5 text-[#54656F] absolute right-2 top-2 pointer-events-none" />
       </div>
 
       {/* Time Filter Dropdown */}
@@ -64,15 +64,15 @@ export const SearchFilters = ({
         <select
           value={date}
           onChange={(e) => onDateChange(e.target.value)}
-          className="appearance-none bg-[#13161c] hover:bg-[#181c24] border border-[#232731] hover:border-[#2f3542] text-zinc-200 text-xs rounded-lg pl-3 pr-7 py-1.5 outline-none focus:border-indigo-500/70 transition-colors cursor-pointer font-medium"
+          className="appearance-none bg-[#F0F2F5] hover:bg-[#E9EDEF] border border-[#D1D7DB] hover:border-[#00A884] text-[#111B21] text-xs rounded-lg pl-3 pr-7 py-1.5 outline-none focus:border-[#00A884] transition-colors cursor-pointer font-medium"
         >
           {MONTH_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value}>
+            <option key={opt.value} value={opt.value} className="bg-[#F0F2F5] text-[#111B21]">
               {opt.label}
             </option>
           ))}
         </select>
-        <ChevronDown className="w-3.5 h-3.5 text-zinc-500 absolute right-2 top-2 pointer-events-none" />
+        <ChevronDown className="w-3.5 h-3.5 text-[#54656F] absolute right-2 top-2 pointer-events-none" />
       </div>
 
       {/* Subtle Clear Filters Action */}
@@ -83,7 +83,7 @@ export const SearchFilters = ({
             onSenderChange('');
             onDateChange('');
           }}
-          className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors underline underline-offset-2 ml-1 cursor-pointer"
+          className="text-xs text-[#008069] hover:text-[#005C4B] transition-colors underline underline-offset-2 ml-1 cursor-pointer font-medium"
         >
           Clear filters
         </button>

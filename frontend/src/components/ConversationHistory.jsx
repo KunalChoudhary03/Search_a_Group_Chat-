@@ -11,14 +11,14 @@ import {
 import { fetchMessages } from '../services/api';
 
 const SENDER_STYLES = {
-  Kunal: { name: 'text-[#586A41]', avatar: 'bg-[#8B9A6E] text-white' },
-  Priya: { name: 'text-[#B86262]', avatar: 'bg-[#C27D7D] text-white' },
-  Rahul: { name: 'text-[#448068]', avatar: 'bg-[#679B85] text-white' },
-  Aman: { name: 'text-[#BC7831]', avatar: 'bg-[#D49B5B] text-white' },
-  Neha: { name: 'text-[#815EA7]', avatar: 'bg-[#987BB8] text-white' },
-  Arjun: { name: 'text-[#3E7C90]', avatar: 'bg-[#5B95A8] text-white' },
-  Simran: { name: 'text-[#A3832B]', avatar: 'bg-[#C7A752] text-white font-bold' },
-  Riya: { name: 'text-[#80588E]', avatar: 'bg-[#9C79A8] text-white' },
+  Kunal: { name: 'text-[#008069]', avatar: 'bg-[#008069] text-white' },
+  Priya: { name: 'text-[#D33E76]', avatar: 'bg-[#D33E76] text-white' },
+  Rahul: { name: 'text-[#007BFC]', avatar: 'bg-[#007BFC] text-white' },
+  Aman: { name: 'text-[#E36D00]', avatar: 'bg-[#E36D00] text-white' },
+  Neha: { name: 'text-[#8A3FFC]', avatar: 'bg-[#8A3FFC] text-white' },
+  Arjun: { name: 'text-[#009688]', avatar: 'bg-[#009688] text-white' },
+  Simran: { name: 'text-[#C27803]', avatar: 'bg-[#C27803] text-white font-bold' },
+  Riya: { name: 'text-[#1F883D]', avatar: 'bg-[#1F883D] text-white' },
 };
 
 const MONTH_OPTIONS = [
@@ -33,13 +33,13 @@ const MONTH_OPTIONS = [
 
 export const getMessageTopic = (msg) => {
   if (msg.threadId === 'winter_trip') {
-    return { label: 'Trip Planning', pill: 'text-[#446638] bg-[#E5EFE0] border-[#C3D8BA]' };
+    return { label: 'Trip Planning', pill: 'text-[#008069] bg-[#E8F7F3] border-[#B2E5D9]' };
   }
   if (msg.threadId === 'college_event') {
-    return { label: 'HackCon', pill: 'text-[#6F4E8F] bg-[#F2E8FA] border-[#D9C4EC]' };
+    return { label: 'HackCon', pill: 'text-[#8A3FFC] bg-[#F4EDFF] border-[#DEC9FB]' };
   }
   if (msg.threadId === 'project_stack') {
-    return { label: 'Project Dev', pill: 'text-[#35678C] bg-[#E4F1F9] border-[#BFDCEF]' };
+    return { label: 'Project Dev', pill: 'text-[#007BFC] bg-[#EBF4FF] border-[#C2DEFF]' };
   }
 
   const text = (msg.message || '').toLowerCase();
@@ -57,7 +57,7 @@ export const getMessageTopic = (msg) => {
     text.includes('os') ||
     text.includes('deadlock')
   ) {
-    return { label: 'Exams', pill: 'text-[#6F4E8F] bg-[#F2E8FA] border-[#D9C4EC]' };
+    return { label: 'Exams', pill: 'text-[#8A3FFC] bg-[#F4EDFF] border-[#DEC9FB]' };
   }
   if (
     text.includes('drive') ||
@@ -68,7 +68,7 @@ export const getMessageTopic = (msg) => {
     text.includes('doc') ||
     text.includes('sheet')
   ) {
-    return { label: 'Files', pill: 'text-[#35678C] bg-[#E4F1F9] border-[#BFDCEF]' };
+    return { label: 'Files', pill: 'text-[#007BFC] bg-[#EBF4FF] border-[#C2DEFF]' };
   }
   if (
     text.includes('trip') ||
@@ -81,7 +81,7 @@ export const getMessageTopic = (msg) => {
     text.includes('cottage') ||
     text.includes('traveller')
   ) {
-    return { label: 'Trip Planning', pill: 'text-[#446638] bg-[#E5EFE0] border-[#C3D8BA]' };
+    return { label: 'Trip Planning', pill: 'text-[#008069] bg-[#E8F7F3] border-[#B2E5D9]' };
   }
   if (
     text.includes('canteen') ||
@@ -91,9 +91,9 @@ export const getMessageTopic = (msg) => {
     text.includes('dinner') ||
     text.includes('chai')
   ) {
-    return { label: 'Hangout', pill: 'text-[#9C6529] bg-[#FAEDE0] border-[#ECCDB1]' };
+    return { label: 'Hangout', pill: 'text-[#E36D00] bg-[#FFF3E8] border-[#FCD7B5]' };
   }
-  return { label: 'General', pill: 'text-[#656E5C] bg-[#EFEAE1] border-[#DDD5C7]' };
+  return { label: 'General', pill: 'text-[#54656F] bg-[#F0F2F5] border-[#D1D7DB]' };
 };
 
 export const ConversationHistory = ({
@@ -168,14 +168,14 @@ export const ConversationHistory = ({
   const hasActiveFilters = Boolean(senderFilter || dateFilter);
 
   return (
-    <div className="bg-white border border-[#E6E0D5] rounded-2xl p-6 shadow-xs space-y-5">
+    <div className="bg-white border border-[#D1D7DB] rounded-2xl p-6 shadow-xs space-y-5">
       {/* Header section with Title, Subtitle, and Top-Right Filters */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-2 border-b border-[#EFE9DF]">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-2 border-b border-[#E9EDEF]">
         <div>
-          <h2 className="text-xl sm:text-2xl font-bold text-[#252B20] tracking-tight">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#111B21] tracking-tight">
             Conversation History
           </h2>
-          <p className="text-xs sm:text-sm text-[#6C7562] mt-1">
+          <p className="text-xs sm:text-sm text-[#667781] mt-1">
             Browse your group chat conversations. Use filters to narrow down by participant or time.
           </p>
         </div>
@@ -184,43 +184,43 @@ export const ConversationHistory = ({
         <div className="flex items-center gap-2.5 flex-wrap self-start lg:self-auto">
           {/* All Participants Dropdown */}
           <div className="relative">
-            <div className="flex items-center gap-1.5 pl-3 pr-8 py-1.5 rounded-xl bg-[#FAF6F0] border border-[#DDD5C7] text-xs text-[#2A3124] cursor-pointer font-medium hover:border-[#8B9A6E] transition-colors">
-              <Users className="w-3.5 h-3.5 text-[#7B8570]" />
+            <div className="flex items-center gap-1.5 pl-3 pr-8 py-1.5 rounded-xl bg-[#F0F2F5] border border-[#D1D7DB] text-xs text-[#111B21] cursor-pointer font-medium hover:border-[#00A884] transition-colors">
+              <Users className="w-3.5 h-3.5 text-[#54656F]" />
               <select
                 value={senderFilter}
                 onChange={(e) => onSenderChange(e.target.value)}
-                className="appearance-none bg-transparent text-[#2A3124] text-xs outline-none cursor-pointer pr-1"
+                className="appearance-none bg-transparent text-[#111B21] text-xs outline-none cursor-pointer pr-1"
               >
-                <option value="" className="bg-[#FAF6F0] text-[#2A3124]">
+                <option value="" className="bg-[#F0F2F5] text-[#111B21]">
                   All Participants
                 </option>
                 {senders.map((s) => (
-                  <option key={s} value={s} className="bg-[#FAF6F0] text-[#2A3124]">
+                  <option key={s} value={s} className="bg-[#F0F2F5] text-[#111B21]">
                     {s} {s === 'Kunal' ? '(You)' : ''}
                   </option>
                 ))}
               </select>
             </div>
-            <ChevronDown className="w-3.5 h-3.5 text-[#7B8570] absolute right-2.5 top-2.5 pointer-events-none" />
+            <ChevronDown className="w-3.5 h-3.5 text-[#54656F] absolute right-2.5 top-2.5 pointer-events-none" />
           </div>
 
           {/* Any Time Dropdown */}
           <div className="relative">
-            <div className="flex items-center gap-1.5 pl-3 pr-8 py-1.5 rounded-xl bg-[#FAF6F0] border border-[#DDD5C7] text-xs text-[#2A3124] cursor-pointer font-medium hover:border-[#8B9A6E] transition-colors">
-              <Calendar className="w-3.5 h-3.5 text-[#7B8570]" />
+            <div className="flex items-center gap-1.5 pl-3 pr-8 py-1.5 rounded-xl bg-[#F0F2F5] border border-[#D1D7DB] text-xs text-[#111B21] cursor-pointer font-medium hover:border-[#00A884] transition-colors">
+              <Calendar className="w-3.5 h-3.5 text-[#54656F]" />
               <select
                 value={dateFilter}
                 onChange={(e) => onDateChange(e.target.value)}
-                className="appearance-none bg-transparent text-[#2A3124] text-xs outline-none cursor-pointer pr-1"
+                className="appearance-none bg-transparent text-[#111B21] text-xs outline-none cursor-pointer pr-1"
               >
                 {MONTH_OPTIONS.map((opt) => (
-                  <option key={opt.value} value={opt.value} className="bg-[#FAF6F0] text-[#2A3124]">
+                  <option key={opt.value} value={opt.value} className="bg-[#F0F2F5] text-[#111B21]">
                     {opt.label}
                   </option>
                 ))}
               </select>
             </div>
-            <ChevronDown className="w-3.5 h-3.5 text-[#7B8570] absolute right-2.5 top-2.5 pointer-events-none" />
+            <ChevronDown className="w-3.5 h-3.5 text-[#54656F] absolute right-2.5 top-2.5 pointer-events-none" />
           </div>
 
           {/* Clear Filters Button */}
@@ -231,7 +231,7 @@ export const ConversationHistory = ({
                 onSenderChange('');
                 onDateChange('');
               }}
-              className="text-xs text-[#8B9A6E] hover:text-[#65734A] transition-colors underline underline-offset-2 ml-1 cursor-pointer font-semibold"
+              className="text-xs text-[#008069] hover:text-[#005C4B] transition-colors underline underline-offset-2 ml-1 cursor-pointer font-semibold"
             >
               Clear
             </button>
@@ -240,19 +240,19 @@ export const ConversationHistory = ({
       </div>
 
       {/* Dataset Summary Banner */}
-      <div className="px-4 py-2.5 rounded-xl bg-[#8B9A6E]/12 border border-[#8B9A6E]/25 flex items-center gap-2 text-xs text-[#485633] select-none font-medium">
-        <MessageSquare className="w-3.5 h-3.5 text-[#8B9A6E] shrink-0" />
+      <div className="px-4 py-2.5 rounded-xl bg-[#E8F7F3] border border-[#B2E5D9] flex items-center gap-2 text-xs text-[#008069] select-none font-medium">
+        <MessageSquare className="w-3.5 h-3.5 text-[#008069] shrink-0" />
         <span>
           {totalMessages ? totalMessages.toLocaleString() : '4,500'}+ messages across 6 months • 8 participants • 3 decision threads
-          {dateFilter && <strong className="text-[#252B20] ml-1">({dateFilter})</strong>}
-          {senderFilter && <strong className="text-[#252B20] ml-1">({senderFilter})</strong>}
+          {dateFilter && <strong className="text-[#111B21] ml-1">({dateFilter})</strong>}
+          {senderFilter && <strong className="text-[#111B21] ml-1">({senderFilter})</strong>}
         </span>
       </div>
 
       {/* Message Stream */}
       <div className="space-y-3 pt-2" ref={scrollRef}>
         {messages.length === 0 && !isLoading && (
-          <div className="text-center py-16 text-[#7E8873] text-xs">
+          <div className="text-center py-16 text-[#667781] text-xs">
             No messages found for this filter combination.
           </div>
         )}
@@ -266,8 +266,8 @@ export const ConversationHistory = ({
 
           const isMe = msg.sender?.toLowerCase() === 'kunal';
           const senderStyle = SENDER_STYLES[msg.sender] || {
-            name: 'text-[#3B4333]',
-            avatar: 'bg-[#8B9A6E] text-white',
+            name: 'text-[#111B21]',
+            avatar: 'bg-[#008069] text-white',
           };
           const topic = getMessageTopic(msg);
 
@@ -276,27 +276,27 @@ export const ConversationHistory = ({
               {/* Centered Date Separator */}
               {isNewDate && (
                 <div className="flex items-center gap-3 my-5 select-none">
-                  <div className="h-px bg-[#E5DFD4] flex-1" />
-                  <span className="text-[11px] font-medium text-[#6B7460] font-mono px-3 py-0.5 rounded-full bg-[#F2ECE2] border border-[#DDD5C6]">
+                  <div className="h-px bg-[#D1D7DB] flex-1" />
+                  <span className="text-[11px] font-medium text-[#54656F] font-mono px-3 py-0.5 rounded-full bg-white border border-[#D1D7DB] shadow-xs">
                     {dateStr}
                   </span>
-                  <div className="h-px bg-[#E5DFD4] flex-1" />
+                  <div className="h-px bg-[#D1D7DB] flex-1" />
                 </div>
               )}
 
               {/* Message Row */}
               {isMe ? (
-                /* Kunal's messages on the RIGHT side */
+                /* Kunal's messages on the RIGHT side - Outgoing Bubble */
                 <div className="flex justify-end my-1 px-1 sm:px-2">
                   <div className="max-w-[85%] sm:max-w-[75%] flex items-start gap-3 justify-end group">
-                    {/* Message Card/Bubble in Sage Tint */}
-                    <div className="rounded-2xl rounded-tr-sm bg-[#EDF3E8] border border-[#C6D5BD] p-3.5 sm:p-4 text-[#23291D] shadow-xs">
+                    {/* Outgoing Message Card/Bubble in Light Green Tint */}
+                    <div className="rounded-2xl rounded-tr-xs bg-[#D9FDD3] border border-[#C3E7B8] p-3.5 sm:p-4 text-[#111B21] shadow-xs">
                       <div className="flex items-baseline justify-between gap-4 mb-1">
-                        <span className="font-semibold text-[#506238] text-sm tracking-tight">
+                        <span className="font-semibold text-[#008069] text-sm tracking-tight">
                           Kunal (You)
                         </span>
                         <div className="flex items-center gap-2">
-                          <span className="text-[11px] text-[#76816B] font-mono">
+                          <span className="text-[11px] text-[#667781] font-mono">
                             {dateStr} • {formatTime(msg.timestamp)}
                           </span>
                           <span
@@ -307,14 +307,14 @@ export const ConversationHistory = ({
                         </div>
                       </div>
 
-                      <p className="text-[#23291D] text-[14px] sm:text-[15px] leading-relaxed break-words font-normal select-text">
+                      <p className="text-[#111B21] text-[14px] sm:text-[15px] leading-relaxed break-words font-normal select-text">
                         {msg.message}
                       </p>
                     </div>
 
                     {/* Avatar Circle on Right */}
                     <div
-                      className="w-8 h-8 rounded-full bg-[#8B9A6E] text-white text-xs font-bold flex items-center justify-center shrink-0 shadow-xs mt-0.5"
+                      className="w-8 h-8 rounded-full bg-[#008069] text-white text-xs font-bold flex items-center justify-center shrink-0 shadow-xs mt-0.5"
                       title="Kunal (You)"
                     >
                       K
@@ -322,7 +322,7 @@ export const ConversationHistory = ({
                   </div>
                 </div>
               ) : (
-                /* Other participants on the LEFT side */
+                /* Other participants on the LEFT side - Incoming Bubble */
                 <div className="flex items-start gap-3 my-1 px-1 sm:px-2 justify-start group">
                   {/* Avatar Circle on Left */}
                   <div
@@ -333,13 +333,13 @@ export const ConversationHistory = ({
                   </div>
 
                   {/* Left Message Bubble/Card */}
-                  <div className="flex-1 max-w-[85%] sm:max-w-[75%] rounded-2xl rounded-tl-sm bg-white border border-[#E6E0D5] hover:border-[#D4CBBF] p-3.5 sm:p-4 text-[#262D20] shadow-xs transition-colors">
+                  <div className="flex-1 max-w-[85%] sm:max-w-[75%] rounded-2xl rounded-tl-xs bg-white border border-[#E9EDEF] hover:border-[#D1D7DB] p-3.5 sm:p-4 text-[#111B21] shadow-xs transition-colors">
                     <div className="flex items-baseline justify-between gap-4 mb-1">
                       <span className={`font-semibold text-sm tracking-tight ${senderStyle.name}`}>
                         {msg.sender}
                       </span>
                       <div className="flex items-center gap-2">
-                        <span className="text-[11px] text-[#7A846E] font-mono">
+                        <span className="text-[11px] text-[#667781] font-mono">
                           {dateStr} • {formatTime(msg.timestamp)}
                         </span>
                         <span
@@ -347,11 +347,11 @@ export const ConversationHistory = ({
                         >
                           {topic.label}
                         </span>
-                        <ChevronRight className="w-3.5 h-3.5 text-[#9DA793] group-hover:text-[#6E7764] transition-colors" />
+                        <ChevronRight className="w-3.5 h-3.5 text-[#8696A0] group-hover:text-[#54656F] transition-colors" />
                       </div>
                     </div>
 
-                    <p className="text-[#282F22] text-[14px] sm:text-[15px] leading-relaxed break-words font-normal select-text">
+                    <p className="text-[#111B21] text-[14px] sm:text-[15px] leading-relaxed break-words font-normal select-text">
                       {msg.message}
                     </p>
                   </div>
@@ -369,16 +369,16 @@ export const ConversationHistory = ({
             type="button"
             onClick={() => loadMessages(page + 1)}
             disabled={isLoading}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#F2ECE2] hover:bg-[#EAE3D6] border border-[#DDD5C6] hover:border-[#8B9A6E] text-xs font-medium text-[#445136] transition-all cursor-pointer disabled:opacity-50 shadow-xs"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#F0F2F5] hover:bg-[#E9EDEF] border border-[#D1D7DB] hover:border-[#008069] text-xs font-medium text-[#111B21] transition-all cursor-pointer disabled:opacity-50 shadow-xs"
           >
             {isLoading ? (
               <>
-                <Loader2 className="w-4 h-4 animate-spin text-[#8B9A6E]" />
+                <Loader2 className="w-4 h-4 animate-spin text-[#008069]" />
                 <span>Loading messages...</span>
               </>
             ) : (
               <>
-                <RotateCw className="w-3.5 h-3.5 text-[#737C68]" />
+                <RotateCw className="w-3.5 h-3.5 text-[#54656F]" />
                 <span>
                   Load more messages ({messages.length} of {totalMessages.toLocaleString()})
                 </span>
@@ -387,7 +387,7 @@ export const ConversationHistory = ({
           </button>
         ) : (
           totalMessages > 0 && (
-            <div className="text-xs text-[#7B8570] font-mono">
+            <div className="text-xs text-[#667781] font-mono">
               ✓ All {totalMessages.toLocaleString()} messages loaded
             </div>
           )

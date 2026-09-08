@@ -73,7 +73,7 @@ export const Home = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-[#F7F2EB] text-[#252B20] flex overflow-hidden font-sans selection:bg-[#8B9A6E]/30 selection:text-[#3B462C]">
+    <div className="h-screen w-screen bg-[#EFEAE2] text-[#111B21] flex overflow-hidden font-sans selection:bg-[#00A884]/30 selection:text-[#005C4B]">
       {/* Left Sidebar */}
       <Sidebar
         activeTab={activeTab}
@@ -96,7 +96,7 @@ export const Home = () => {
         />
 
         {/* Scrollable Workspace */}
-        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 bg-[#F7F2EB]">
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 bg-[#EFEAE2]">
           <div className="max-w-6xl mx-auto">
             {/* Notice / Error banner */}
             {errorMessage && (
@@ -107,7 +107,7 @@ export const Home = () => {
             )}
 
             {activeTab === 'chat' ? (
-              /* Conversation History Hero (WhatsApp-Style with Kunal on Right, others on Left) */
+              /* Conversation History Hero (With Kunal on Right, others on Left) */
               <ConversationHistory
                 stats={stats}
                 dateFilter={dateFilter}
@@ -129,14 +129,14 @@ export const Home = () => {
               />
             ) : (
               /* Search Results Panel */
-              <div className="bg-white border border-[#E6E0D5] rounded-2xl p-6 shadow-xs space-y-4">
-                <div className="pb-4 border-b border-[#EFE9DF] flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+              <div className="bg-white border border-[#D1D7DB] rounded-2xl p-6 shadow-xs space-y-4">
+                <div className="pb-4 border-b border-[#E9EDEF] flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                   <div>
-                    <h2 className="text-xl font-bold text-[#252B20] tracking-tight">
+                    <h2 className="text-xl font-bold text-[#111B21] tracking-tight">
                       Search Results
                     </h2>
-                    <p className="text-xs text-[#6C7562] mt-1">
-                      Semantic results for <strong className="text-[#51633A] font-semibold">"{searchedQuery}"</strong>
+                    <p className="text-xs text-[#667781] mt-1">
+                      Semantic results for <strong className="text-[#008069] font-semibold">"{searchedQuery}"</strong>
                       {dateFilter && ` in ${dateFilter}`}
                       {senderFilter && ` by ${senderFilter}`}
                     </p>
@@ -144,7 +144,7 @@ export const Home = () => {
 
                   <div className="flex items-center gap-4">
                     {!isLoading && results.length > 0 && (
-                      <span className="text-xs font-mono text-[#78826D]">
+                      <span className="text-xs font-mono text-[#667781]">
                         {results.length} matches · sorted by similarity ({totalCandidates} candidates evaluated)
                       </span>
                     )}
@@ -152,7 +152,7 @@ export const Home = () => {
                     <button
                       type="button"
                       onClick={() => setActiveTab('chat')}
-                      className="text-xs text-[#8B9A6E] hover:text-[#5F6C47] transition-colors font-semibold flex items-center gap-1 cursor-pointer"
+                      className="text-xs text-[#008069] hover:text-[#005C4B] transition-colors font-semibold flex items-center gap-1 cursor-pointer"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
                       <span>Back to Chat</span>
@@ -163,13 +163,13 @@ export const Home = () => {
                 {/* Search Body */}
                 {isLoading ? (
                   <div className="py-20 text-center space-y-2">
-                    <Loader2 className="w-6 h-6 animate-spin text-[#8B9A6E] mx-auto" />
-                    <p className="text-xs text-[#6E7764] font-mono">
+                    <Loader2 className="w-6 h-6 animate-spin text-[#008069] mx-auto" />
+                    <p className="text-xs text-[#667781] font-mono">
                       Generating query embedding & computing exact cosine similarities...
                     </p>
                   </div>
                 ) : results.length > 0 ? (
-                  <div className="divide-y divide-[#EFE9DF]">
+                  <div className="divide-y divide-[#E9EDEF]">
                     {results.map((item, index) => (
                       <SearchResult
                         key={item._id || item.id || index}
@@ -180,7 +180,7 @@ export const Home = () => {
                     ))}
                   </div>
                 ) : !errorMessage ? (
-                  <div className="py-16 text-center text-[#7E8873] text-xs">
+                  <div className="py-16 text-center text-[#667781] text-xs">
                     Type a query in the top search bar to search across 4,500+ messages by meaning.
                   </div>
                 ) : null}

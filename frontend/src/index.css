@@ -5,16 +5,18 @@
 :root {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color-scheme: light;
-  --primary: #8B9A6E;
-  --bg-main: #F7F2EB;
+  --primary: #008069;
+  --primary-accent: #00A884;
+  --bg-chat: #EFEAE2;
+  --text-main: #111B21;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #F7F2EB;
-  color: #252B20;
+  background-color: #EFEAE2;
+  color: #111B21;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,10 +32,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D8D1C4;
+  background: #CED5D8;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C2BAAC;
+  background: #B6BFC3;
 }

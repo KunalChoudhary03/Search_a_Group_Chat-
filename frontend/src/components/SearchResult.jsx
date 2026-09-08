@@ -48,19 +48,19 @@ export const SearchResult = ({ result, onFetchContext, activeDateFilter = '' }) 
     result.similarity !== undefined ? Number(result.similarity).toFixed(2) : null;
 
   return (
-    <div className="group border-b border-[#EFE9DF] last:border-b-0 py-4 px-3 sm:px-4 rounded-xl hover:bg-[#FAF6F0] transition-colors">
+    <div className="group border-b border-[#E9EDEF] last:border-b-0 py-4 px-3 sm:px-4 rounded-xl hover:bg-[#F0F2F5]/70 transition-colors">
       <div className="space-y-2">
         {/* Header: Sender + Timestamp */}
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-baseline gap-2.5">
-            <span className="font-semibold text-[#252B20] text-[14px] sm:text-[15px] tracking-tight">
+            <span className={`font-semibold text-[14px] sm:text-[15px] tracking-tight ${result.sender === 'Kunal' ? 'text-[#008069]' : 'text-[#111B21]'}`}>
               {result.sender === 'Kunal' ? 'Kunal (You)' : result.sender}
             </span>
-            <span className="text-[12px] text-[#7A846E] font-mono">
+            <span className="text-[12px] text-[#667781] font-mono">
               {formattedDate} · {formattedTime}
             </span>
             {result.messageType === 'decision' && (
-              <span className="inline-flex items-center gap-1 text-[11px] text-[#526639] bg-[#EDF3E8] border border-[#C6D5BD] px-2 py-0.5 rounded-full font-medium">
+              <span className="inline-flex items-center gap-1 text-[11px] text-[#008069] bg-[#E8F7F3] border border-[#B2E5D9] px-2 py-0.5 rounded-full font-medium">
                 <CheckCircle2 className="w-3 h-3" /> decision
               </span>
             )}
@@ -68,15 +68,15 @@ export const SearchResult = ({ result, onFetchContext, activeDateFilter = '' }) 
         </div>
 
         {/* Message Text */}
-        <p className="text-[#2C3325] text-[15px] sm:text-[16px] leading-relaxed font-normal select-text">
+        <p className="text-[#111B21] text-[15px] sm:text-[16px] leading-relaxed font-normal select-text">
           "{result.message}"
         </p>
 
         {/* Metadata & Context Toggle */}
         <div className="flex items-center justify-between pt-1 text-xs">
-          <div className="text-[#7A846E] font-mono text-[12px]">
+          <div className="text-[#667781] font-mono text-[12px]">
             {scoreFormatted !== null && (
-              <span>Semantic similarity: <strong className="text-[#3D4733] font-medium">{scoreFormatted}</strong></span>
+              <span>Semantic similarity: <strong className="text-[#008069] font-medium">{scoreFormatted}</strong></span>
             )}
           </div>
 
@@ -84,10 +84,10 @@ export const SearchResult = ({ result, onFetchContext, activeDateFilter = '' }) 
             type="button"
             onClick={handleToggleContext}
             disabled={loadingContext}
-            className="inline-flex items-center gap-1 text-xs text-[#8B9A6E] hover:text-[#5F6C47] font-semibold transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1 text-xs text-[#008069] hover:text-[#005C4B] font-semibold transition-colors cursor-pointer"
           >
             {loadingContext ? (
-              <span className="text-[#7A846E]">Loading context...</span>
+              <span className="text-[#667781]">Loading context...</span>
             ) : showContext ? (
               <>
                 <span>Hide context</span>

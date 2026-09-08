@@ -1,0 +1,476 @@
+[
+  {
+    "id": 1,
+    "query": "Where did we decide to go for the winter vacation?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Manali",
+    "expectedExternalId": "trip-005",
+    "description": "Must retrieve the Manali winter trip decision"
+  },
+  {
+    "id": 2,
+    "query": "What did Priya say about the hotel budget?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedSender": "Priya",
+    "expectedMatch": "Hotel budget kitna rakhein",
+    "expectedExternalId": "trip-008",
+    "description": "Must retrieve Priya's hotel budget inquiry"
+  },
+  {
+    "id": 3,
+    "query": "What transportation did we pick for the winter journey?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "Tempo traveller",
+    "expectedExternalId": "trip-012",
+    "description": "Must retrieve the tempo traveller transport choice"
+  },
+  {
+    "id": 4,
+    "query": "Who suggested cafes in Old Manali?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Old Manali me cafes",
+    "expectedExternalId": "trip-006",
+    "description": "Must retrieve Simran's recommendation of Old Manali cafes"
+  },
+  {
+    "id": 5,
+    "query": "What was the agreed per-person ceiling for cottages?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "2500 per person max",
+    "expectedExternalId": "trip-009",
+    "description": "Must retrieve Rahul's 2500 per person budget cap"
+  },
+  {
+    "id": 6,
+    "query": "What snowy destinations did Kunal suggest?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Shimla ya Auli",
+    "expectedExternalId": "trip-003",
+    "description": "Must retrieve Kunal's Shimla/Auli suggestion"
+  },
+  {
+    "id": 7,
+    "query": "When is HackCon 2026 scheduled to take place?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "March 28-29",
+    "expectedExternalId": "event-003",
+    "description": "Must retrieve HackCon dates decision"
+  },
+  {
+    "id": 8,
+    "query": "What total funding was sanctioned by the college council for the fest?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "50,000",
+    "expectedExternalId": "event-009",
+    "description": "Must retrieve council approved ₹50,000 budget"
+  },
+  {
+    "id": 9,
+    "query": "Where will the HackCon project presentations be held?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Main Auditorium",
+    "expectedExternalId": "event-007",
+    "description": "Must retrieve Main Auditorium presentation venue"
+  },
+  {
+    "id": 10,
+    "query": "Who will handle sponsorships and judges for HackCon?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "sponsorships aur guest judges",
+    "expectedExternalId": "event-011",
+    "description": "Must retrieve Priya's sponsorship role"
+  },
+  {
+    "id": 11,
+    "query": "Who will build the event registration portal website for HackCon?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "event portal and registration website",
+    "expectedExternalId": "event-012",
+    "description": "Must retrieve Rahul's event portal responsibility"
+  },
+  {
+    "id": 12,
+    "query": "What database was chosen for storing unstructured chat messages?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "MongoDB",
+    "expectedExternalId": "project-007",
+    "description": "Must retrieve MongoDB database decision"
+  },
+  {
+    "id": 13,
+    "query": "Which backend server technology did Aman recommend?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Node",
+    "expectedExternalId": "project-005",
+    "description": "Must retrieve Node/Express recommendation"
+  },
+  {
+    "id": 14,
+    "query": "Will search use local embeddings or paid APIs?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "local embeddings",
+    "expectedExternalId": "project-009",
+    "description": "Must retrieve local embeddings decision"
+  },
+  {
+    "id": 15,
+    "query": "Which CSS framework was chosen for styling the project UI?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Tailwind CSS",
+    "expectedExternalId": "project-010",
+    "description": "Must retrieve Tailwind CSS styling decision"
+  },
+  {
+    "id": 16,
+    "query": "Who confirmed the finalized locked major project stack?",
+    "category": "decision_thread",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "stack is locked",
+    "expectedExternalId": "project-011",
+    "description": "Must retrieve Neha's locked stack confirmation"
+  },
+  {
+    "id": 17,
+    "query": "Where did we decide to spend the cold-weather break?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "Manali kar lete hain, snow bhi milegi",
+    "description": "Zero keyword overlap: cold-weather break -> winter trip Manali"
+  },
+  {
+    "id": 18,
+    "query": "What are the financial limits for our lodging accommodation?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "2500 per person max",
+    "description": "Zero keyword overlap: lodging accommodation financial limits -> hotel budget 2500"
+  },
+  {
+    "id": 19,
+    "query": "Which framework did we select for building the web frontend?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "React",
+    "description": "Zero keyword overlap: web frontend framework -> React with Vite"
+  },
+  {
+    "id": 20,
+    "query": "What persistence layer did the team agree upon for storing documents?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "MongoDB",
+    "description": "Zero keyword overlap: persistence layer -> MongoDB"
+  },
+  {
+    "id": 21,
+    "query": "When is the collegiate engineering competition happening?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "March 28-29",
+    "description": "Zero keyword overlap: collegiate engineering competition -> HackCon dates"
+  },
+  {
+    "id": 22,
+    "query": "What is the maximum approved expenditure for the campus festival?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "50,000",
+    "description": "Zero keyword overlap: maximum approved expenditure -> 50,000 budget"
+  },
+  {
+    "id": 23,
+    "query": "Where will the presentations take place on campus?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "Main Auditorium",
+    "description": "Zero keyword overlap: presentations on campus -> Main Auditorium"
+  },
+  {
+    "id": 24,
+    "query": "Did someone share funny internet pictures about studying?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "relatable",
+    "description": "Zero keyword overlap: funny internet pictures -> relatable meme"
+  },
+  {
+    "id": 25,
+    "query": "Which vehicle was selected for travelling together as a group?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "Tempo traveller",
+    "description": "Zero keyword overlap: travelling together vehicle -> tempo traveller"
+  },
+  {
+    "id": 26,
+    "query": "Who is handling logistics and campus administrative clearances?",
+    "category": "zero_keyword_overlap",
+    "zeroKeywordOverlap": true,
+    "expectedMatch": "logistics and permissions",
+    "description": "Zero keyword overlap: campus administrative clearances -> logistics and permissions"
+  },
+  {
+    "id": 27,
+    "query": "trip ka final kya hua tha?",
+    "category": "hinglish",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Manali",
+    "description": "Hinglish query retrieving Manali destination decision"
+  },
+  {
+    "id": 28,
+    "query": "HackCon event ka venue kaun sa decide hua?",
+    "category": "hinglish",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Auditorium",
+    "description": "Hinglish query retrieving event auditorium venue"
+  },
+  {
+    "id": 29,
+    "query": "canteen me maggi khane ka plan kisne banaya?",
+    "category": "hinglish",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "canteen chalein maggi",
+    "description": "Hinglish query retrieving canteen maggi hangout"
+  },
+  {
+    "id": 30,
+    "query": "shaam ko dinner ke liye dhaba chalte hain",
+    "category": "hinglish",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "dhaba chalte hain",
+    "description": "Hinglish query retrieving dinner at dhaba plan"
+  },
+  {
+    "id": 31,
+    "query": "hotel budget 2500 per person max kisne bola?",
+    "category": "hinglish",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "2500 per person max",
+    "description": "Hinglish query retrieving 2500 per head hotel budget"
+  },
+  {
+    "id": 32,
+    "query": "mnali ka plan kb fix hua?",
+    "category": "typo",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Manali",
+    "description": "Typo query (mnali, kb) retrieving Manali destination decision"
+  },
+  {
+    "id": 33,
+    "query": "asgmnt submit hua kya sabka?",
+    "category": "typo",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "assignment submit hua",
+    "description": "Typo query (asgmnt) retrieving assignment submission"
+  },
+  {
+    "id": 34,
+    "query": "kya tmrow 9 AM lab practical viva hai?",
+    "category": "typo",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "lab practical",
+    "description": "Typo query (tmrow) retrieving lab practical announcement"
+  },
+  {
+    "id": 35,
+    "query": "prbably database option PostgreSQL ya MongoDB?",
+    "category": "typo",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "PostgreSQL ya MongoDB",
+    "description": "Typo query (prbably) retrieving database choice"
+  },
+  {
+    "id": 36,
+    "query": "hotel budget",
+    "category": "sender_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "sender": "Priya" },
+    "expectedSender": "Priya",
+    "expectedMatch": "Hotel budget kitna rakhein",
+    "description": "Sender filter: Priya's hotel budget inquiry"
+  },
+  {
+    "id": 37,
+    "query": "snow thand",
+    "category": "sender_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "sender": "Rahul" },
+    "expectedSender": "Rahul",
+    "expectedMatch": "Somewhere with snow",
+    "description": "Sender filter: Rahul's snow preference"
+  },
+  {
+    "id": 38,
+    "query": "tempo traveller",
+    "category": "sender_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "sender": "Aman" },
+    "expectedSender": "Aman",
+    "expectedMatch": "Tempo traveller sahi rahega",
+    "description": "Sender filter: Aman's tempo traveller choice"
+  },
+  {
+    "id": 39,
+    "query": "CS labs presentations",
+    "category": "sender_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "sender": "Arjun" },
+    "expectedSender": "Arjun",
+    "expectedMatch": "Main Auditorium aur CS labs",
+    "description": "Sender filter: Arjun's presentation venue message"
+  },
+  {
+    "id": 40,
+    "query": "What were we planning in February?",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "February 2026" },
+    "description": "Temporal filter: February conversations"
+  },
+  {
+    "id": 41,
+    "query": "hackathon committee discussions in March",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "March 2026" },
+    "description": "Temporal filter: March conversations"
+  },
+  {
+    "id": 42,
+    "query": "tech stack conversations in April",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "April 2026" },
+    "description": "Temporal filter: April conversations"
+  },
+  {
+    "id": 43,
+    "query": "mid sem date sheet",
+    "category": "combined_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "sender": "Rahul", "date": "March 2026" },
+    "expectedSender": "Rahul",
+    "expectedMatch": "mid sem",
+    "description": "Combined filter: Rahul in March 2026"
+  },
+  {
+    "id": 44,
+    "query": "sponsorships",
+    "category": "combined_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "sender": "Priya", "date": "March 2026" },
+    "expectedSender": "Priya",
+    "expectedMatch": "sponsorships",
+    "description": "Combined filter: Priya in March 2026"
+  },
+  {
+    "id": 45,
+    "query": "architecture document",
+    "category": "combined_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "sender": "Arjun", "date": "April 2026" },
+    "expectedSender": "Arjun",
+    "expectedMatch": "architecture document",
+    "description": "Combined filter: Arjun in April 2026"
+  },
+  {
+    "id": 46,
+    "query": "attendance portal criteria 75 percent",
+    "category": "noisy_conversation",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "attendance portal check karo",
+    "description": "Noisy conversation: attendance criteria"
+  },
+  {
+    "id": 47,
+    "query": "Double egg roll from Rolls King",
+    "category": "noisy_conversation",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Rolls King",
+    "description": "Noisy conversation: food delivery order"
+  },
+  {
+    "id": 48,
+    "query": "Interstellar IMAX movie re-release tickets",
+    "category": "noisy_conversation",
+    "zeroKeywordOverlap": false,
+    "expectedMatch": "Interstellar IMAX",
+    "description": "Noisy conversation: movie planning"
+  },
+  {
+    "id": 49,
+    "query": "What were we planning?",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "January 2026" },
+    "description": "Temporal filter TEST 1: What were we planning in January 2026 (all results in January)"
+  },
+  {
+    "id": 50,
+    "query": "trip ka plan kya tha?",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "January 2026" },
+    "expectedMatch": "plan",
+    "description": "Temporal filter TEST 2: trip ka plan kya tha? in January 2026 (Manali/winter trip in Jan)"
+  },
+  {
+    "id": 51,
+    "query": "hotel budget",
+    "category": "combined_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "sender": "Priya", "date": "January 2026" },
+    "expectedSender": "Priya",
+    "expectedMatch": "hotel budget",
+    "description": "Combined filter TEST 3: Priya + January 2026 hotel budget"
+  },
+  {
+    "id": 52,
+    "query": "What were we planning?",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "March 2026" },
+    "description": "Temporal filter TEST 4: What were we planning in March 2026 (no Jan/Feb/Apr results)"
+  },
+  {
+    "id": 53,
+    "query": "exam preparation",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "May 2026" },
+    "description": "Temporal filter: May 2026 conversations (all results in May)"
+  },
+  {
+    "id": 54,
+    "query": "vacation after exams",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "June 2026" },
+    "description": "Temporal filter: June 2026 conversations (all results in June)"
+  },
+  {
+    "id": 55,
+    "query": "What were we planning?",
+    "category": "temporal_filter",
+    "zeroKeywordOverlap": false,
+    "filter": { "date": "Any time" },
+    "description": "Temporal filter TEST 5: Any Time filter returns results across the dataset"
+  }
+]

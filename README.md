@@ -59,21 +59,71 @@ npm run test:search
 
 ---
 
-## 5. Quickstart & Scripts
+## 5. Quickstart & Installation
 
-### Setup & Data Generation (Backend)
+### Prerequisites
+- **Node.js**: `v18.0.0` or higher
+- **npm**: `v9.0.0` or higher
+- *(Optional)* **MongoDB**: Local MongoDB server or MongoDB Atlas URI. If MongoDB is not running locally, the backend automatically boots an embedded local database instance.
+
+---
+
+### Option A: Quickstart from Root (Recommended)
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/KunalChoudhary03/Search_a_Group_Chat-.git
+   cd Search_a_Group_Chat-
+   ```
+
+2. **Install all dependencies** (Root, Backend & Frontend):
+   ```bash
+   npm run install:all
+   ```
+
+3. **Seed dataset & generate embeddings**:
+   ```bash
+   cd backend
+   npm run setup               # Seeds 4,600 messages and generates 384-d local embeddings
+   cd ..
+   ```
+
+4. **Start both Backend and Frontend concurrently**:
+   ```bash
+   npm run dev
+   ```
+   - **Backend API**: `http://localhost:5000`
+   - **Frontend UI**: `http://localhost:5173`
+
+---
+
+### Option B: Step-by-Step Manual Setup
+
+#### 1. Backend Setup & Data Seeding
+Open your **first terminal**:
 ```bash
 cd backend
+npm install
+
+# Seed dataset & compute local vector embeddings
 npm run generate:data        # Seeds 4,600 realistic messages & 3 decision threads into MongoDB
 npm run generate:embeddings  # Computes and stores 384-d local embeddings
-npm run test:search          # Runs 48 benchmark queries (100% pass)
-node scripts/analyzeDuplicates.js # Evaluates dataset uniqueness (0.24% duplicates)
+npm run test:search          # Runs 48 benchmark evaluation queries (100% pass)
+npm run test:duplicates      # Evaluates dataset uniqueness (0.24% duplicates)
+
+# Start backend server
 npm start                    # Starts backend server on http://localhost:5000
 ```
 
-### Frontend
+#### 2. Frontend Setup
+Open a **second terminal**:
 ```bash
 cd frontend
+npm install
 npm run dev                  # Starts Vite dev server on http://localhost:5173
-npm run build                # Builds production bundle
+```
+
+To create a production build of the frontend:
+```bash
+npm run build
 ```
